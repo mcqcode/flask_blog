@@ -1,0 +1,39 @@
+{% extends'base.html' %}
+
+{% block title %}
+        用户注册
+{% endblock %}
+{% block mycss %}
+    <style>
+        body{
+            background-image: url("../../static/img/bk_1.jpg");
+            background-size: cover;
+        }
+        #login{
+            width: 350px;
+            height: 450px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+{% block center %}
+<div id="login" style="border: 1px solid #9CEAF4">
+    <h2>用户注册</h2>
+    <form action="/register"class="form-group" method="post">
+        <p><input type="text" name="username" class="form-control" placeholder="用户名"></p>
+        <p><input type="password" name="password"class="form-control" placeholder="密码"></p>
+        <p><input type="password" name="repassword" class="form-control"placeholder="确认密码"></p>
+        <p><input type="number" name="phone" class="form-control"placeholder="联系方式"></p>
+        <p><input style="display: inline" type="radio" name="sex" value="男" checked>男</p>
+        <p><input style="display: inline" type="radio" name="sex" value="女" >女</p>
+        <p><input type="submit"class="btn btn-lg btn-primary btn-block" value="注册"></p>
+    </form>
+    <p style="color: red; ">{{ msg }}</p>
+</div>
+
+{% endblock %}

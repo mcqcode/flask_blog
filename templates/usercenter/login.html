@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}
+        用户登录
+{% endblock %}
+{% block mycss %}
+    <style>
+        body{
+            background-image: url("../../static/img/bk_1.jpg");
+            background-size: cover;
+        }
+        #login{
+            width: 500px;
+            height: 300px;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+{% block center %}
+<div id="login" style="border: 1px solid #9CEAF4">
+    <form class="form-horizontal" action="login.html",method="post">
+  <div class="form-group">
+
+      <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputEmail3" placeholder="用户名/邮箱" name="username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="密码" name="password">
+    </div>
+  </div>
+          <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div >
+          <input type="checkbox" value="0"> 记住密码
+
+      </div>
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" class="btn btn-lg btn-primary btn-block" style="width: 100px"value="登录">
+        <a href=""><p style="color: #5a6268">忘记密码?</p></a>
+    </div>
+  </div>
+
+</form>
+</div>
+
+{% endblock %}
